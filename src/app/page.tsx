@@ -10,14 +10,20 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black text-white p-8">
-      <h1 className="text-5xl font-bold text-center text-cyan-400 drop-shadow-[0_0_25px_rgba(0,255,255,0.9)] mb-4">
+      {/* 3D ANIMATED PREMIUM LOGO */}
+      <h1 className="text-6xl font-bold text-center text-cyan-400 mb-4 animate-[spin_8s_linear_infinite] drop-shadow-[0_0_40px_rgba(0,255,255,1)] [text-shadow:0_0_20px_#00ffff,0_0_40px_#00ffff,0_0_60px_#00ffff] [transform-style:preserve-3d] [perspective:1000px]">
         ibrahim.com
       </h1>
-      <p className="text-center text-gray-400 mb-16">FUTURE OF E-COMMERCE</p>
       
+      <p className="text-center text-gray-400 mb-16 tracking-widest">FUTURE OF E-COMMERCE</p>
+      
+      {/* PREMIUM PRODUCT GRID */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {products.map((product) => (
-          <div key={product.id} className="border border-cyan-400/30 rounded-xl p-6 hover:border-cyan-400 hover:shadow-[0_0_30px_rgba(0,255,255,0.5)] transition-all">
+          <div 
+            key={product.id} 
+            className="bg-gray-900/50 backdrop-blur-sm border-cyan-400/20 rounded-2xl p-6 hover:border-cyan-400/60 hover:shadow-[0_20px_50px_rgba(0,255,255,0.2)] hover:-translate-y-2 transition-all duration-300"
+          >
             <div className="text-6xl text-center mb-4">{product.img}</div>
             <h3 className="text-xl font-bold text-cyan-300 mb-2">{product.name}</h3>
             <p className="text-2xl font-bold text-white mb-4">{product.price}</p>
