@@ -10,10 +10,28 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-black text-white p-8">
-      {/* 3D ANIMATED PREMIUM LOGO */}
-      <h1 className="text-6xl font-bold text-center text-cyan-400 mb-4 animate-[spin_8s_linear_infinite] drop-shadow-[0_0_40px_rgba(0,255,255,1)] [text-shadow:0_0_20px_#00ffff,0_0_40px_#00ffff,0_0_60px_#00ffff] [transform-style:preserve-3d] [perspective:1000px]">
+      {/* 3D CUBE LOGO */}
+      <div className="flex justify-center mb-8 [perspective:1000px]">
+        <div className="relative w-32 h-32 animate-[spin_6s_linear_infinite] [transform-style:preserve-3d]">
+          {/* Front face */}
+          <div className="absolute w-32 h-32 bg-cyan-400 text-black font-bold text-4xl flex items-center justify-center rounded-xl shadow-[0_0_40px_rgba(0,255,255,0.8)] [transform:translateZ(64px)]">
+            IB
+          </div>
+          {/* Back face */}
+          <div className="absolute w-32 h-32 bg-cyan-600 text-black font-bold text-4xl flex items-center justify-center rounded-xl [transform:rotateY(180deg)_translateZ(64px)]">
+            IB
+          </div>
+          {/* Top face */}
+          <div className="absolute w-32 h-32 bg-cyan-500 text-black font-bold text-4xl flex items-center justify-center rounded-xl [transform:rotateX(90deg)_translateZ(64px)]">
+            IB
+          </div>
+        </div>
+      </div>
+
+      {/* WEBSITE NAME */}
+      <h2 className="text-5xl font-bold text-center text-cyan-400 drop-shadow-[0_0_30px_rgba(0,255,255,1)] mb-4">
         ibrahim.com
-      </h1>
+      </h2>
       
       <p className="text-center text-gray-400 mb-16 tracking-widest">FUTURE OF E-COMMERCE</p>
       
